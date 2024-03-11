@@ -15,6 +15,13 @@ class _MyAppState extends State<MyApp> {
   bool _agree = false;
   String dropdownValue = 'Option 1';
 
+  var outlineInputBorder = OutlineInputBorder(
+    borderSide: const BorderSide(
+      color: Color.fromARGB(255, 236, 229, 229),
+    ),
+    borderRadius: BorderRadius.circular(15),
+  );
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +33,7 @@ class _MyAppState extends State<MyApp> {
             onTap: () {
               // Add the action you want to perform when the icon is tapped
               // For example, you can navigate to the previous screen
-              print('Arrow back pressed');
+              // print('Arrow back pressed');
             },
             child: const Icon(
               Icons.arrow_back,
@@ -71,69 +78,11 @@ class _MyAppState extends State<MyApp> {
               const SizedBox(
                 height: 15,
               ),
-              TextField(
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  hintText: 'Email',
-                ),
-              ),
+              const MyTextField(hintText: 'Email'),
               const SizedBox(
                 height: 15,
               ),
-              TextField(
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  hintText: 'Phone Number',
-                ),
-              ),
+              const MyTextField(hintText: 'Phone Number'),
               const SizedBox(
                 height: 20,
               ),
@@ -144,173 +93,28 @@ class _MyAppState extends State<MyApp> {
               const SizedBox(
                 height: 15,
               ),
-              TextField(
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  hintText: 'Business Name',
-                ),
-              ),
+              const MyTextField(hintText: 'Business Name'),
               const SizedBox(
                 height: 15,
               ),
-              TextField(
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  hintText: 'Business Type',
-                ),
-              ),
+              const MyTextField(hintText: 'Business Type'),
               const SizedBox(
                 height: 15,
               ),
-              TextField(
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  hintText: 'Product Type',
-                ),
-              ),
+              const MyTextField(hintText: 'Product Type'),
               const SizedBox(
                 height: 15,
               ),
-              Row(
+              const Row(
                 children: [
                   Expanded(
                     child: ListTile(
-                      subtitle: TextFormField(
-                        cursorColor: Colors.orange,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 236, 229, 229),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 236, 229, 229),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 236, 229, 229),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          disabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 236, 229, 229),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          hintText: 'Area',
-                        ),
-                      ),
+                      subtitle: MyTextField(hintText: 'Area'),
                     ),
                   ),
                   Expanded(
                     child: ListTile(
-                      subtitle: TextFormField(
-                        cursorColor: Colors.orange,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 236, 229, 229),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 236, 229, 229),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 236, 229, 229),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          disabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 236, 229, 229),
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          hintText: 'District',
-                        ),
-                      ),
+                      subtitle: MyTextField(hintText: 'District'),
                     ),
                   ),
                 ],
@@ -318,36 +122,7 @@ class _MyAppState extends State<MyApp> {
               const SizedBox(
                 height: 15,
               ),
-              TextField(
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 236, 229, 229),
-                    ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  hintText: 'Business Address',
-                ),
-              ),
+              const MyTextField(hintText: 'Business Adress'),
               Row(
                 children: [
                   Checkbox(
@@ -422,6 +197,38 @@ class _MyAppState extends State<MyApp> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class MyTextField extends StatefulWidget {
+  final String hintText;
+
+  const MyTextField({Key? key, required this.hintText}) : super(key: key);
+
+  @override
+  State<MyTextField> createState() => _MyTextFieldState();
+}
+
+class _MyTextFieldState extends State<MyTextField> {
+  var outlineInputBorder = OutlineInputBorder(
+    borderSide: const BorderSide(
+      color: Color.fromARGB(255, 236, 229, 229),
+    ),
+    borderRadius: BorderRadius.circular(15),
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      cursorColor: Colors.orange,
+      decoration: InputDecoration(
+        border: outlineInputBorder,
+        focusedBorder: outlineInputBorder,
+        enabledBorder: outlineInputBorder,
+        disabledBorder: outlineInputBorder,
+        hintText: widget.hintText,
       ),
     );
   }
