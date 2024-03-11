@@ -13,7 +13,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool _agree = false;
-  String dropdownValue = 'Option 1';
 
   var outlineInputBorder = OutlineInputBorder(
     borderSide: const BorderSide(
@@ -97,7 +96,14 @@ class _MyAppState extends State<MyApp> {
               const SizedBox(
                 height: 15,
               ),
-              const MyTextField(hintText: 'Business Type'),
+              MyTextField(
+                hintText: 'Business Type',
+                icon: Icons.arrow_drop_down,
+                onIconPressed: () {
+                  // Handle dropdown logic here
+                  // Show dropdown menu or perform any other actions
+                },
+              ),
               const SizedBox(
                 height: 15,
               ),
@@ -204,8 +210,15 @@ class _MyAppState extends State<MyApp> {
 
 class MyTextField extends StatefulWidget {
   final String hintText;
+  final IconData? icon;
+  final VoidCallback? onIconPressed; // Callback function for the icon press
 
-  const MyTextField({Key? key, required this.hintText}) : super(key: key);
+  const MyTextField({
+    Key? key,
+    required this.hintText,
+    this.icon,
+    this.onIconPressed,
+  }) : super(key: key);
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
@@ -214,7 +227,7 @@ class MyTextField extends StatefulWidget {
 class _MyTextFieldState extends State<MyTextField> {
   var outlineInputBorder = OutlineInputBorder(
     borderSide: const BorderSide(
-      color: Color.fromARGB(255, 236, 229, 229),
+      color: Color.fromARGB(255, 240, 232, 232),
     ),
     borderRadius: BorderRadius.circular(15),
   );
@@ -229,6 +242,12 @@ class _MyTextFieldState extends State<MyTextField> {
         enabledBorder: outlineInputBorder,
         disabledBorder: outlineInputBorder,
         hintText: widget.hintText,
+        suffixIcon: widget.icon != null
+            ? IconButton(
+                icon: Icon(widget.icon),
+                onPressed: widget.onIconPressed, // Execute callback function
+              )
+            : null,
       ),
     );
   }
