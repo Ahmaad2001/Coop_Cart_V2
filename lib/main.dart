@@ -14,13 +14,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   bool _agree = false;
 
-  var outlineInputBorder = OutlineInputBorder(
-    borderSide: const BorderSide(
-      color: Color.fromARGB(255, 236, 229, 229),
-    ),
-    borderRadius: BorderRadius.circular(15),
-  );
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
