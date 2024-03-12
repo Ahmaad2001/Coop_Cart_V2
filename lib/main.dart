@@ -21,17 +21,6 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: false,
-          leading: GestureDetector(
-            onTap: () {
-              // Add the action you want to perform when the icon is tapped
-              // For example, you can navigate to the previous screen
-              // print('Arrow back pressed');
-            },
-            child: const Icon(
-              Icons.arrow_back,
-              color: Colors.white,
-            ),
-          ),
           title: const Text(
             'Join Us',
             textAlign: TextAlign.left,
