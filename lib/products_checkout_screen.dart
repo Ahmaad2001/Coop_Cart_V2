@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_screen.dart';
 
 void main() {
   runApp(const ProductsCheckout());
@@ -13,6 +14,15 @@ class ProductsCheckout extends StatefulWidget {
 
 class _ProductsCheckoutState extends State<ProductsCheckout> {
   String? paymentMethod;
+
+  void _placeOrder() {
+    // Navigate to the LoginScreen
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -314,7 +324,7 @@ class _ProductsCheckoutState extends State<ProductsCheckout> {
                 width: 500,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: _placeOrder,
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.orange),
                     shape: MaterialStateProperty.all(

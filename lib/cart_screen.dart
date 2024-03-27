@@ -192,6 +192,7 @@ class _CartScreenState extends State<CartScreen> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   hintText: 'Anything we need to know?',
+                  hintStyle: const TextStyle(color: Colors.grey),
                 ),
               ),
               const SizedBox(
